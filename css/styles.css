@@ -1,0 +1,656 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+
+    
+}
+
+
+.navbar {
+    padding: 1rem 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav{
+    gap: 20px;
+}
+
+.navbar-brand .logo {
+    width: 110px;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #333;
+}
+
+.nav-link.active {
+    
+    background-color: #ffc107;
+    border-radius: 10px;
+}
+@media(max-width:768px){
+    .nav-link.active{
+        padding: 1rem;
+        box-sizing: border-box;
+        width: 24%;
+    }
+    
+}
+
+
+.hero-section {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.hero-subtitle {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffc107;
+}
+
+.hero-description {
+    margin-top: 4rem;
+    color: #777;
+}
+.hero-section button{
+    margin-top: 4rem;
+    font-weight:400;
+    font-size:15px;
+}
+
+.hero-image {
+    max-width: 110%;
+    height: auto;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .hero-image {
+        display: none;
+    }
+}
+
+h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.project-subtitle {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.card {
+    border: none;
+    border-radius: 13px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding:22px;
+}
+
+.card-title {
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.card-text {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.tags .badge {
+   
+    margin-right: 7px;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    margin-top: 5px;
+    color: black;
+    border-radius:10px;
+    font-weight: 400;
+    background-color:#4b555f12;
+}
+
+.stars {
+    color: #f6c300;
+}
+#Recommendations {
+    background-color: #f7f7f7;
+    padding: 50px 0;
+    text-align: center;
+}
+#Recommendations h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+#Recommendations p {
+    font-size: 1rem;
+    margin-bottom: 40px;
+    color: #555;
+}
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 0 60px;
+}
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.recommendation-card {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0 10px;
+    text-align: left;
+    flex-shrink: 0;
+    width: calc(100% / 3.5); 
+}
+.recommendation-card img {
+    border-radius: 50%;
+    margin-bottom: 15px;
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin-right: auto;
+    
+}
+.recommendation-card h5 {
+    font-size: 20px;
+    font-weight: 600;
+}
+.name {
+    font-weight: bold;
+    text-align: center;
+    margin-right: auto;
+    margin-top: -69px;
+}
+.position {
+    font-size: 0.9rem;
+    color: #777;
+    text-align: center;
+    margin-right: auto;
+}
+.slider-controls {
+    position: absolute;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.slider-controls button {
+    background-color: #ded7bf;
+    color: white;
+    border: none;
+    padding: 4px;
+    border-radius: 45%;
+    cursor: pointer;
+    outline: none;
+}
+.slider-controls button:hover {
+    background-color: #f6c300;
+}
+.dots-container {
+    text-align: center;
+    margin-top: 10px;
+}
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #b8a869;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.dot.active {
+    background-color: #f6c300;
+}
+@media (max-width: 1200px) {
+    .recommendation-card {
+        width: calc(100% / 2.5); 
+    }
+}
+@media (max-width: 768px) {
+    .recommendation-card {
+        width: calc(100% / 1.5); 
+    }
+}
+@media (max-width: 576px) {
+    .recommendation-card {
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
+    .slider-controls {
+        padding: 0 10px;
+        margin-top: -58px;
+    }
+    .slider-controls button {
+        padding: 6px; 
+        
+        
+    }
+}
+
+
+section-heading {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.form-section, .contact-info-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 2px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.form-label {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 5px;
+}
+.form-control {
+    background-color: #f4f4f4;
+    border: none;
+    border-radius: 5px;
+}
+.form-control:focus {
+    box-shadow: none;
+    border: 1px solid #ccc;
+}
+.btn-primary {
+    background-color: #ffcd3c;
+    border: none;
+    font-weight: bold;
+    color: #333;
+}
+.btn-primary:hover {
+    background-color: #ffb300;
+}
+
+
+
+.contact-info-card #frame {
+    position: relative;
+    font-size: 24px;
+    color: #ffcd3c;
+    margin-right: 15px;
+    display:block;
+    margin:0 auto;
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/Ellipse\ 41\ \(2\).png);
+    background-position: center;
+    background-size: cover; }
+
+ #myImg {
+    font-size: 24px;
+    color: #ffcd3c;
+    margin-right: 15px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    margin: auto;
+}                                                             
+.contact-info-card p {
+    margin: 0;
+    font-size: 14px;
+}
+.contact-info-card p span {
+    font-weight: bold;
+    margin-right: 10px;
+}
+.d-flex.align-items-center {
+    display: flex;
+    align-items: center;
+}
+.contact-info-card .d-flex {
+    justify-content: space-between;
+}
+
+.footer {
+    padding: 30px 0;
+    background-color: #f4f4f4;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer .rating {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer .rating img {
+    max-width: 140px;
+}
+
+.footer .footer-sections {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px 0;
+}
+
+.footer .footer-section {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.footer .footer-section h5 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer .footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer .footer-section ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.footer .image-section img {
+    max-width: 80px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+.footer .image-section p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.footer .connect ul li a img {
+    max-width: 80px;
+    margin-right: 12px;
+}
+
+.footer .copyright {
+    font-size: 14px;
+    color: #666;
+    margin-top: 20px;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .footer .rating,
+    .footer .footer-sections {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .rating img {
+        max-width: 80px;
+    }
+
+    .footer .footer-section {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+
+.skills-section {
+    padding: 50px 0;
+    text-align: center;
+}
+.skills-section h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.skills-section p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.skill-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 0; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.skill-card h4 {
+    font-weight: bold;
+    margin: 20px 20px 0 20px; 
+    font-size: 18px;
+}
+
+.progress-container {
+    padding: 0 20px 20px 20px; 
+    
+}
+
+.progress {
+    background-color: #eee;
+    height: 6px;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    background-color: #f6c300;
+}
+
+.progress-label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-skill-btn {
+    background-color: #f6c300;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+.add-skill-btn:hover {
+    background-color: #e5b200;
+}
+
+.modal-content {
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.modal-header {
+    border-bottom: none;
+    text-align: center;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #f6c300;
+    border: none;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #e5b200;
+}
+
+.btn-danger {
+    background-color: #f44336;
+    border: none;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #d32f2f;
+}
+
+.skills-section {
+    margin-top: 20px;
+}
+
+.skill-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.skill-row input {
+    width: 48%;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+}
+
+.btn-secondary {
+    margin-top: 10px;
+}
+
+.skill-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+}
+
+.skill-card h4 {
+    margin-top: 0;
+}
+     
+.skill-card {
+    width: 350px; 
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px auto;
+}
+
+.skill-card h4 {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px; 
+}
+
+.skill-name {
+    font-size: 14px;
+    color: #333;
+}
+
+.skill-percentage {
+    font-size: 14px;
+    color: #333;
+}
+
+.progress {
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 8px;
+}
+
+.progress-bar {
+    background-color: #ffa500; 
+    height: 100%;
+    transition: width 0.6s ease;
+}
